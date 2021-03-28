@@ -7,7 +7,7 @@ router.post('/todo/add', addTodo);
 router.get('/todo/get', getTodo);
 
 
-router.patch('/todo/:id', async (req, res) => {
+router.patch('/todo/update/:id', async (req, res) => {
 	try {
 		const id = req.params.id;
 		const updates = req.body;
@@ -20,7 +20,7 @@ router.patch('/todo/:id', async (req, res) => {
 	}
 });
 
-router.delete('/todo/:id', async (req, res) => {
+router.delete('/todo/delete/:id', async (req, res) => {
 	
 	try {
 		const id = req.params.id;
